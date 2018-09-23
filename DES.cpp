@@ -299,7 +299,6 @@ void Cipher(long long int msg,long long int key){
 	//Fungsi untuk key
 	int keyr=(int)(key);
 	int keyl=(int)(key>>32);
-	//cout<<"Key Left Int:= "<<keyl<<"  Key Right Int:= "<<keyr<<endl;
 	int c0=0,d0=0;
 	//Dilakukan permutation choice 1 pada key
 	pKEY(keyl,keyr);
@@ -309,7 +308,6 @@ void Cipher(long long int msg,long long int key){
 	int kl=0,kr=0;
 	int r0=(int)(msg);
 	int l0=(int)(msg>>32);
-	//cout<<"Msg Left Int:= "<<l0<<"  Msg Right Int:= "<<r0<<endl;
 	//Dilakukan initial permutation pada Plaintext
 	pIP(l0,r0);
 	//Proses 16 kali ronde
